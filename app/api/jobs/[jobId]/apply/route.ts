@@ -5,7 +5,8 @@ import { revalidatePath } from "next/cache";
 
 import { NextResponse } from "next/server";
 
-export async function POST(req:Request, {params}:{params:{jobId:string}}) {
+export async function POST(req: Request,
+  { params }: { params: { [key: string]: string } }) {
     
     const session=await auth()
     console.log("session", session)
