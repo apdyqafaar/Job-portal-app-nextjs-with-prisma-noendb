@@ -19,7 +19,7 @@ export async function POST(
     if (!session?.user || !session.user.id) {
       return NextResponse.json(
         { error: "You don't have access, please login" },
-        { status: 401 }
+        { status: 409 }
       );
     }
 
