@@ -3,10 +3,10 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: Request,
-  { params }: { params: { [key: string]: string } }) {
+export async function POST(  request: NextRequest,
+  { params }: { params: { jobId: string } }) {
     
     const session=await auth()
     console.log("session", session)
