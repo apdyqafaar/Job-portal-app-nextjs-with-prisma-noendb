@@ -17,10 +17,10 @@ import React from "react";
 const PostedJobs = async ({
   searchParams,
 }: {
-  searchParams: {qu?: string; type?: string };
+  searchParams: Promise<{qu?: string; type?: string }>;
 }) => {
 
-  const {qu, type }= searchParams
+  const {qu, type }= await searchParams
   const query= qu as string | undefined
    const typeFilter= type as string | undefined
 
@@ -79,13 +79,7 @@ const PostedJobs = async ({
           <Button className="py-6 rounded-none cursor-pointer text-lg">
             Search
           </Button>
-          {
-            searchParams.qu&&(
-              <Link href={"/posts"} className="py-6 rounded-none cursor-pointer text-lg">
-            Clear
-          </Link>
-            )
-          }
+        
         </form>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 w-full">
           {jobs.map((j) => (
