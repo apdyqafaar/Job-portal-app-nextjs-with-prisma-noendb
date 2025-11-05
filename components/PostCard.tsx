@@ -60,9 +60,7 @@ export function JobCard({ thumbnail, title, description, postedBy,postedAt, loca
         <Button onClick={()=>setIsPoview(!isPostView)} variant="outline" className="rounded-none border-0 px-6 text-base hover:bg-neutral-50 cursor-pointer flex items-center hover:gap-4 transition-all">
           View <ArrowRight/>
         </Button>
-        {/* <Button className="rounded-full px-6 bg-indigo-600 hover:bg-indigo-700">
-          Apply
-        </Button> */}
+     
          <ApplyButton jobId={jobId}/>
       </CardFooter>
     </Card>
