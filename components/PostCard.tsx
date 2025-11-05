@@ -72,15 +72,6 @@ export function JobCard({ thumbnail, title, description, postedBy,postedAt, loca
     <Dialog onOpenChange={setIsPoview} open={isPostView} >
         
   <DialogContent className="w-3xl" >
-     {thumbnail ? (
-          <Image
-            src={thumbnail}
-            alt={title}
-            className="h-[200px] w-16 rounded object-cover border"
-          />
-        ) : (
-          <div className="h-[200px] rounded bg-gradient-to-r from-indigo-200 to-purple-300 w-full my-4" />
-        )}
     <DialogHeader>
       <DialogTitle>{title}</DialogTitle>
       <DialogDescription>
