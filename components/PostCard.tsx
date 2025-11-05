@@ -35,15 +35,6 @@ export function JobCard({ thumbnail, title, description, postedBy,postedAt, loca
     <Card className="shadow-md hover:shadow-lg transition rounded-xl border border-gray-200 dark:border-gray-800">
       {/* Thumbnail / Header */}
       <CardHeader className="flex flex-row items-center gap-4">
-        {thumbnail ? (
-          <Image
-            src={thumbnail}
-            alt={title}
-            className="h-16 w-16 rounded-md object-cover border"
-          />
-        ) : (
-          <div className="h-16 w-16 rounded-md bg-gradient-to-r from-indigo-500 to-purple-600" />
-        )}
         <div className="space-y-1">
           <h2 className="text-xl font-semibold line-clamp-1">{title}</h2>
           <p className="text-sm text-muted-foreground line-clamp-2">
